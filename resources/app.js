@@ -26,7 +26,7 @@ function calculate() {
   if (expression !== '') {
     try {
       const result = eval(expression);
-      resultElement.value = result.toFixed(5);
+      resultElement.value = parseFloat(result.toFixed(5));
       expression = result;
     } catch (error) {
       resultElement.value = 'Error';
