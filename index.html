@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/reset.css">
+    <link rel="stylesheet" href="./resources/style.css">
+    <link rel="icon" type="image/x-icon" href="./resources/favicon-32x32.png">
+    <title>Calculator</title>
+</head>
+<body>
+    <header>
+        <h3>calc</h3>
+        <div class="theme">
+            <div class="theme-num">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </div>
+            <div class="range">
+                <h4>theme</h4>
+                <input type="range" min="1" max="3" value="1" class="slider slider1" oninput="update()">
+            </div>
+        </div>
+    </header>
+    <main>
+        <input type="text" class="write-number" id="screen" readonly>
+        <div class="button-cont">
+            <div class="buttons" >
+                <button value="7" class="button " onclick= "appendNumber(7)">7</button>
+                <button value="8" class="button " onclick= "appendNumber(8)">8</button>
+                <button value="9" class="button " onclick= "appendNumber(9)">9</button>
+                <button value="del" class="button del" onclick="deleteLastCharacter()">del</button>
+                <button value="4" class="button " onclick= "appendNumber(4)">4</button>
+                <button value="5" class="button " onclick= "appendNumber(5)">5</button>
+                <button value="6" class="button " onclick= "appendNumber(6)">6</button>
+                <button value="+" class="button plus" onclick="performOperation('+')">+</button>
+                <button value="1" class="button " onclick= "appendNumber(1)">1</button>
+                <button value="2" class="button " onclick= "appendNumber(2)">2</button>
+                <button value="3" class="button " onclick= "appendNumber(3)">3</button>
+                <button value="-" class="button minus" onclick="performOperation('-')">-</button>
+                <button value="," class="button " onclick="performOperation('.')">.</button>
+                <button value="0" class="button " onclick= "appendNumber(0)">0</button>
+                <button value="/" class="button substruct" onclick="performOperation('/')">/</button>
+                <button value="*" class="button multiply" onclick="performOperation('*')">x</button>
+                <button value="res" class="button reset" onclick="clearCalculator()">reset</button>
+                <button value="=" class="button sum" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </main>
+    <script src="./resources/theme.js"></script>
+    <script src="./resources/app.js"></script>
+</body>
+</html>
